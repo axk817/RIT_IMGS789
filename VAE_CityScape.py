@@ -246,7 +246,7 @@ class VAE(keras.Model):
         }
 
     def configure_optimizers(self):
-        return keras.optimizers.RectifiedAdamW(learning_rate=self.learning_rate, weight_decay=0.004)
+        return keras.optimizers.RectifiedAdam(learning_rate=self.learning_rate, weight_decay=0.004)
 
     @property
     def metrics(self):
